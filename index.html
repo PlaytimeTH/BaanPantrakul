@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สรุปการขายหุ้น บ้านพรรณตระกูล จำกัด | Deal Summary 120M</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'IBM Plex Sans Thai', 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #0f172a;
+    background: #f8fafc;
+    line-height: 1.65;
+    font-size: 15px;
+  }
+
+  /* ===== Layout ===== */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 50px 0; border-bottom: 1px solid #e2e8f0; }
+  section:last-of-type { border-bottom: none; }
+
+  /* ===== Hero ===== */
+  .hero {
+    background-color: #0f172a;
+    background-image: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #334155 100%);
+    color: #ffffff;
+    padding: 60px 0 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 20% 30%, rgba(16,185,129,0.15) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(59,130,246,0.15) 0%, transparent 50%);
+  }
+  .hero .container { position: relative; z-index: 2; }
+  .hero-label {
+    display: inline-block;
+    padding: 5px 14px;
+    border: 1px solid rgba(110,231,183,0.4);
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #6ee7b7;
+    background: rgba(16,185,129,0.08);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .hero .subtitle {
+    color: #cbd5e1;
+    font-size: 17px;
+    margin-bottom: 36px;
+    max-width: 720px;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .hero-stat {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 16px 18px;
+    backdrop-filter: blur(10px);
+  }
+  .hero-stat .label { color: #94a3b8; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .hero-stat .value { color: #ffffff; font-size: 22px; font-weight: 700; margin-top: 4px; }
+  .hero-stat .hint { color: #6ee7b7; font-size: 12px; margin-top: 2px; }
+
+  /* ===== Section Headers ===== */
+  .section-kicker {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+    letter-spacing: -0.3px;
+  }
+  h3 { font-size: 19px; font-weight: 600; color: #1e293b; margin-bottom: 10px; }
+  h4 { font-size: 16px; font-weight: 600; color: #334155; margin-bottom: 6px; }
+  .section-intro { color: #475569; font-size: 16px; max-width: 820px; margin-bottom: 30px; }
+
+  /* ===== Cards & Grids ===== */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 768px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+  }
+
+  /* ===== Shareholder Table ===== */
+  table { width: 100%; border-collapse: collapse; margin-top: 16px; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(15,23,42,0.05); }
+  th {
+    background: #1e293b;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  td { padding: 13px 14px; border-bottom: 1px solid #f1f5f9; font-size: 14px; color: #0f172a; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .tag-main { background: #dbeafe; color: #1e40af; }
+  .tag-minor { background: #fef3c7; color: #92400e; }
+
+  /* ===== Pie Chart ===== */
+  .pie-wrap {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .pie { flex: 0 0 260px; }
+  .pie-legend { flex: 1; min-width: 260px; }
+  .legend-item { display: flex; align-items: center; padding: 8px 0; border-bottom: 1px dashed #e2e8f0; }
+  .legend-dot { width: 14px; height: 14px; border-radius: 3px; margin-right: 10px; flex-shrink: 0; }
+  .legend-label { flex: 1; font-size: 14px; }
+  .legend-value { font-weight: 600; color: #0f172a; font-variant-numeric: tabular-nums; }
+
+  /* ===== Options Comparison ===== */
+  .option-card {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .option-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(15,23,42,0.08); }
+  .option-card.recommended { border-color: #10b981; background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 30%); }
+  .option-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #10b981;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .option-title { font-size: 18px; font-weight: 700; margin-bottom: 6px; color: #0f172a; }
+  .option-subtitle { font-size: 13px; color: #64748b; margin-bottom: 16px; }
+  .option-breakdown { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+  .breakdown-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed #e2e8f0; font-size: 14px; }
+  .breakdown-row:last-child { border-bottom: none; font-weight: 700; padding-top: 12px; color: #0f172a; border-top: 2px solid #0f172a; margin-top: 4px; }
+  .pro-con-list { margin-top: 16px; font-size: 13px; }
+  .pro-con-list li { list-style: none; padding: 4px 0; padding-left: 24px; position: relative; }
+  .pro-con-list li.pro::before { content: "✓"; position: absolute; left: 0; color: #10b981; font-weight: 700; }
+  .pro-con-list li.con::before { content: "✗"; position: absolute; left: 0; color: #ef4444; font-weight: 700; }
+
+  /* ===== Expense Breakdown ===== */
+  .expense-grid { display: grid; gap: 12px; margin-top: 20px; }
+  .expense-row {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    padding: 16px 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+  }
+  .expense-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .icon-red { background: #fee2e2; color: #b91c1c; }
+  .icon-orange { background: #ffedd5; color: #c2410c; }
+  .icon-yellow { background: #fef3c7; color: #a16207; }
+  .icon-blue { background: #dbeafe; color: #1e40af; }
+  .icon-green { background: #d1fae5; color: #047857; }
+  .icon-purple { background: #ede9fe; color: #6d28d9; }
+  .expense-desc { font-size: 14px; color: #475569; }
+  .expense-desc strong { color: #0f172a; display: block; font-size: 15px; margin-bottom: 2px; }
+  .expense-amount { font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; color: #0f172a; }
+  .expense-amount .unit { font-size: 11px; color: #64748b; font-weight: 500; margin-top: 2px; display: block; }
+
+  /* ===== Timeline ===== */
+  .timeline { margin-top: 24px; }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-date {
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    background: #1e293b;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    align-self: start;
+  }
+  .timeline-date.urgent { background: #dc2626; }
+  .timeline-date.soon { background: #ea580c; }
+  .timeline-date.later { background: #0284c7; }
+  .timeline-content h4 { margin-bottom: 6px; font-size: 15px; }
+  .timeline-content p { font-size: 14px; color: #475569; }
+  .timeline-content .owner { display: inline-block; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-size: 11px; color: #475569; margin-top: 6px; }
+
+  /* ===== Callouts ===== */
+  .callout {
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin: 24px 0;
+    border-left: 4px solid;
+    font-size: 14px;
+  }
+  .callout-warning { background: #fef3c7; border-color: #f59e0b; color: #78350f; }
+  .callout-info { background: #dbeafe; border-color: #3b82f6; color: #1e3a8a; }
+  .callout-success { background: #d1fae5; border-color: #10b981; color: #064e3b; }
+  .callout-danger { background: #fee2e2; border-color: #ef4444; color: #7f1d1d; }
+  .callout strong { font-weight: 700; }
+  .callout h4 { margin-bottom: 6px; font-size: 15px; font-weight: 700; color: inherit; }
+
+  /* ===== Lever Cards ===== */
+  .lever-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 14px;
+  }
+  .lever-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+  .lever-name { font-weight: 700; font-size: 16px; color: #0f172a; }
+  .lever-saving { background: #10b981; color: #fff; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+  .lever-saving.risk { background: #f59e0b; }
+  .lever-body { font-size: 14px; color: #475569; }
+  .lever-body strong { color: #0f172a; }
+
+  /* ===== Footer ===== */
+  footer {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 13px;
+  }
+  footer .container { color: #cbd5e1; }
+  footer strong { color: #fff; }
+
+  /* ===== Print ===== */
+  @media print {
+    body { background: #fff; font-size: 11px; }
+    section { padding: 20px 0; page-break-inside: avoid; }
+    .hero { background: #0f172a !important; -webkit-print-color-adjust: exact; color-adjust: exact; }
+    .card, table, .option-card, .expense-row, .lever-card { break-inside: avoid; }
+  }
+
+  /* ===== Utility ===== */
+  .text-muted { color: #64748b; }
+  .text-small { font-size: 13px; }
+  .mt-sm { margin-top: 10px; }
+  .mt-md { margin-top: 20px; }
+  .mb-sm { margin-bottom: 10px; }
+  .flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .highlight { background: linear-gradient(transparent 60%, #fef08a 60%); padding: 0 2px; }
+  .nav-top {
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e2e8f0;
+    z-index: 100;
+    padding: 12px 0;
+    font-size: 13px;
+  }
+  .nav-top .container { display: flex; gap: 18px; overflow-x: auto; }
+  .nav-top a { color: #475569; text-decoration: none; white-space: nowrap; padding: 4px 0; border-bottom: 2px solid transparent; }
+  .nav-top a:hover { color: #0f172a; border-bottom-color: #0f172a; }
+</style>
+</head>
+<body>
+
+<!-- ================ HERO ================ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-label">Deal Summary v2 · 🚆 MRT-Adjusted · Family Use</div>
+    <h1>การขายหุ้น บ้านพรรณตระกูล จำกัด<br><span style="color:#6ee7b7; font-size:28px;">มูลค่า 120 ล้านบาท + MRT Premium</span></h1>
+    <p class="subtitle">สรุปโครงสร้างดีลใหม่ที่ปรับปรุงตามปัจจัย <strong style="color:#fde68a;">สถานี MRT ห่างเพียง 200m</strong> — ปลดล็อก Option D ที่ประหยัดภาษีได้สูงสุด ~30M เมื่อเทียบกับการขายแบบตรงๆ</p>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="label">มูลค่าดีล</div>
+        <div class="value">฿120.0M</div>
+        <div class="hint">ราคาที่ตกลงกับผู้ซื้อ</div>
+      </div>
+      <div class="hero-stat">
+        <div class="label">ผู้ถือหุ้น</div>
+        <div class="value">7 คน</div>
+        <div class="hint">ตาม บอจ.5 ล่าสุด</div>
+      </div>
+      <div class="hero-stat">
+        <div class="label">ค่าใช้จ่ายรวม (Option D)</div>
+        <div class="value">~฿13M</div>
+        <div class="hint">ภาษี + ค่านายหน้า + วิชาชีพ</div>
+      </div>
+      <div class="hero-stat" style="background:rgba(16,185,129,0.15); border-color:rgba(110,231,183,0.4);">
+        <div class="label">เข้ากระเป๋าครอบครัว</div>
+        <div class="value" style="color:#6ee7b7;">~฿107-108M</div>
+        <div class="hint">⭐ Option D (MRT-adjusted)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================ Nav ================ -->
+<nav class="nav-top">
+  <div class="container">
+    <a href="#overview">ภาพรวม</a>
+    <a href="#shareholders">ผู้ถือหุ้น</a>
+    <a href="#options">4 ทางเลือก</a>
+    <a href="#expenses">ค่าใช้จ่าย</a>
+    <a href="#actions">สิ่งที่ต้องทำ</a>
+    <a href="#allocation">จัดสรรมูลค่า</a>
+    <a href="#recommendation">คำแนะนำ</a>
+  </div>
+</nav>
+
+<!-- ================ 1. OVERVIEW ================ -->
+<section id="overview">
+  <div class="container">
+    <span class="section-kicker">01 · Overview</span>
+    <h2>ภาพรวมดีลและสินทรัพย์ในกอง</h2>
+    <p class="section-intro">บริษัท <strong>บ้านพรรณตระกูล จำกัด</strong> (ทะเบียน 0105546065418) ประกอบกิจการโรงแรม มีสินทรัพย์หลักคือ อาคาร + ใบอนุญาตโรงแรม โดยที่ดินอยู่ในชื่อคุณแม่ส่วนตัว — ดีลนี้ผู้ซื้อเสนอซื้อ 120M เพื่อต่อยอดกิจการโรงแรมเดิม <strong style="color:#047857;">โดยมีปัจจัย MRT 200m เป็นตัวเปลี่ยนเกม</strong></p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div style="font-size:32px; margin-bottom:8px;">🏨</div>
+        <h3>อาคาร + ใบอนุญาตโรงแรม</h3>
+        <p class="text-muted text-small">อยู่ในชื่อบริษัท — ใบอนุญาตตาม พ.ร.บ.โรงแรม พ.ศ. 2547 <strong>โอนไม่ได้</strong> ผูกกับบริษัทและสถานที่ ถ้าเปลี่ยนเจ้าของต้องขายผ่าน Share Sale เท่านั้น</p>
+      </div>
+      <div class="card">
+        <div style="font-size:32px; margin-bottom:8px;">🌿</div>
+        <h3>ที่ดินหลัก (Land A)</h3>
+        <p class="text-muted text-small">ถือในชื่อคุณแม่ (<strong>นางพรรณทิพย์</strong>) โดยตรง บริษัทเช่าใช้โดย<span class="highlight">ไม่มีค่าเช่า</span> — ต้องทำสัญญาเช่าใหม่ก่อนดีล</p>
+      </div>
+      <div class="card">
+        <div style="font-size:32px; margin-bottom:8px;">📋</div>
+        <h3>เงินให้กรรมการกู้</h3>
+        <p class="text-muted text-small">บริษัทค้างหนี้กรรมการประมาณ <strong>~27.75M</strong> — สามารถชำระคืนก่อนปิดดีลได้ โดย<strong>ไม่เสียภาษี</strong> (คืนเงินต้น)</p>
+      </div>
+      <div class="card" style="background:linear-gradient(135deg,#ecfdf5 0%,#f0fdf4 100%); border-color:#10b981; border-width:2px;">
+        <div style="font-size:32px; margin-bottom:8px;">🚆</div>
+        <h3 style="color:#047857;">สถานี MRT ห่าง 200m</h3>
+        <p class="text-muted text-small"><strong style="color:#065f46;">Game Changer ใหม่!</strong> Prime TOD Zone ทำให้ที่ดินมี Premium +50% ถึง +150% ตามมาตรฐานการประเมินอสังหาฯ ไทย — ปลดล็อก Option D</p>
+      </div>
+    </div>
+
+    <div class="callout callout-info" style="margin-top:28px;">
+      <h4>💡 เหตุใดผู้ซื้อถึงต้องซื้อทั้งบริษัท (Share Sale)</h4>
+      <p>ใบอนุญาตโรงแรมโอนไม่ได้ หากผู้ซื้อซื้อเฉพาะอาคาร+ที่ดินแล้วขอใบอนุญาตใหม่เอง อาจใช้เวลา <strong>6-18 เดือน</strong> และไม่แน่ใจว่าจะได้หรือไม่ — นี่คือ <strong>Leverage การต่อรอง</strong>ที่เราใช้ได้ เพราะใบอนุญาตคือสินทรัพย์ที่มีมูลค่าจริงในดีลนี้</p>
+    </div>
+
+    <div class="callout callout-success" style="margin-top:16px;">
+      <h4>🚆 MRT Premium: เหตุผลที่สามารถ Upload มูลค่าที่ดินได้</h4>
+      <p>ตามสถิติของ <strong>AREA, Plus Property, Knight Frank</strong> ที่ดินในรัศมี <strong>200m จากสถานี MRT</strong> (Prime TOD — Transit Oriented Development) มี Premium เหนือราคาพื้นฐาน <strong>+50% ถึง +150%</strong> ซึ่งเพียงพอที่จะจัดสรรมูลค่าที่ดินได้สูงขึ้นอย่างสมเหตุสมผลตาม <strong>มาตรา 65 ทวิ (4)</strong> แห่งประมวลรัษฎากร — ต้องมี Independent Appraisal รองรับ</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================ 2. SHAREHOLDERS ================ -->
+<section id="shareholders">
+  <div class="container">
+    <span class="section-kicker">02 · Shareholders</span>
+    <h2>โครงสร้างผู้ถือหุ้น (บอจ.5)</h2>
+    <p class="section-intro">ข้อมูล ณ ประชุม 30/04/2568 · ทุนจดทะเบียน 3,000,000 บาท แบ่งเป็น 10,000 หุ้น หุ้นละ 300 บาท · ผู้ถือหุ้นหลัก 4 คนแบ่งเกือบเท่ากัน ผู้ถือหุ้นรายย่อย 3 คน ถือคนละ 1 หุ้น (nominee ตามข้อกำหนดเดิมที่ต้องมีอย่างน้อย 7 ราย)</p>
+
+    <div class="pie-wrap">
+      <div class="pie">
+        <svg viewBox="0 0 100 100" width="100%" height="auto" style="max-width:260px;">
+          <!-- Pie chart segments -->
+          <!-- พรรณพ 2547 = 25.47% -->
+          <circle cx="50" cy="50" r="40" fill="transparent" stroke="#3b82f6" stroke-width="20"
+                  stroke-dasharray="64.02 251.33" stroke-dashoffset="0" transform="rotate(-90 50 50)"/>
+          <!-- พรรณทิพย์ 2550 = 25.50% -->
+          <circle cx="50" cy="50" r="40" fill="transparent" stroke="#10b981" stroke-width="20"
+                  stroke-dasharray="64.10 251.33" stroke-dashoffset="-64.02" transform="rotate(-90 50 50)"/>
+          <!-- พรรณทินี 2450 = 24.50% -->
+          <circle cx="50" cy="50" r="40" fill="transparent" stroke="#f59e0b" stroke-width="20"
+                  stroke-dasharray="61.59 251.33" stroke-dashoffset="-128.12" transform="rotate(-90 50 50)"/>
+          <!-- พรรณเพร 2450 = 24.50% -->
+          <circle cx="50" cy="50" r="40" fill="transparent" stroke="#8b5cf6" stroke-width="20"
+                  stroke-dasharray="61.59 251.33" stroke-dashoffset="-189.71" transform="rotate(-90 50 50)"/>
+          <!-- Minor 3 shares = 0.03% -->
+          <circle cx="50" cy="50" r="40" fill="transparent" stroke="#94a3b8" stroke-width="20"
+                  stroke-dasharray="0.08 251.33" stroke-dashoffset="-251.30" transform="rotate(-90 50 50)"/>
+          <text x="50" y="48" text-anchor="middle" fill="#0f172a" style="font-size:8px; font-weight:700;">10,000</text>
+          <text x="50" y="56" text-anchor="middle" fill="#64748b" style="font-size:4px;">หุ้นรวม</text>
+        </svg>
+      </div>
+      <div class="pie-legend">
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#3b82f6;"></span>
+          <span class="legend-label">นายพรรณพ ชะระไสย์ <span class="tag tag-main">พ่อ</span></span>
+          <span class="legend-value">2,547 หุ้น · 25.47%</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#10b981;"></span>
+          <span class="legend-label">นางพรรณทิพย์ ชะระไสย์ <span class="tag tag-main">แม่</span></span>
+          <span class="legend-value">2,550 หุ้น · 25.50%</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#f59e0b;"></span>
+          <span class="legend-label">น.ส.พรรณทินี ชะระไสย์ <span class="tag tag-main">พี่/น้องสาว</span></span>
+          <span class="legend-value">2,450 หุ้น · 24.50%</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#8b5cf6;"></span>
+          <span class="legend-label">นางพรรณเพร นาคะวิสุทธิ์ <span class="tag tag-main">Pang</span></span>
+          <span class="legend-value">2,450 หุ้น · 24.50%</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#94a3b8;"></span>
+          <span class="legend-label">Minor holders × 3 คน <span class="tag tag-minor">nominee</span></span>
+          <span class="legend-value">3 หุ้น · 0.03%</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:30px;">รายละเอียดการคำนวณ · ถ้าขายหุ้นทั้ง 120M</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ผู้ถือหุ้น</th>
+          <th class="num">หุ้น</th>
+          <th class="num">%</th>
+          <th class="num">เงินที่จะได้รับ</th>
+          <th class="num">ต้นทุนหุ้น</th>
+          <th class="num">Capital Gain</th>
+          <th class="num">PIT โดยประมาณ*</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>นายพรรณพ (พ่อ)</td>
+          <td class="num">2,547</td>
+          <td class="num">25.47%</td>
+          <td class="num">30,564,000</td>
+          <td class="num">764,100</td>
+          <td class="num">29,799,900</td>
+          <td class="num" style="color:#dc2626;">~9,945,000</td>
+        </tr>
+        <tr>
+          <td>นางพรรณทิพย์ (แม่)</td>
+          <td class="num">2,550</td>
+          <td class="num">25.50%</td>
+          <td class="num">30,600,000</td>
+          <td class="num">765,000</td>
+          <td class="num">29,835,000</td>
+          <td class="num" style="color:#dc2626;">~9,957,000</td>
+        </tr>
+        <tr>
+          <td>น.ส.พรรณทินี (พี่/น้อง)</td>
+          <td class="num">2,450</td>
+          <td class="num">24.50%</td>
+          <td class="num">29,400,000</td>
+          <td class="num">735,000</td>
+          <td class="num">28,665,000</td>
+          <td class="num" style="color:#dc2626;">~9,548,000</td>
+        </tr>
+        <tr>
+          <td>นางพรรณเพร (Pang)</td>
+          <td class="num">2,450</td>
+          <td class="num">24.50%</td>
+          <td class="num">29,400,000</td>
+          <td class="num">735,000</td>
+          <td class="num">28,665,000</td>
+          <td class="num" style="color:#dc2626;">~9,548,000</td>
+        </tr>
+        <tr>
+          <td>Minor × 3</td>
+          <td class="num">3</td>
+          <td class="num">0.03%</td>
+          <td class="num">36,000</td>
+          <td class="num">900</td>
+          <td class="num">35,100</td>
+          <td class="num">~3,500</td>
+        </tr>
+        <tr style="background:#f1f5f9; font-weight:700;">
+          <td>รวม</td>
+          <td class="num">10,000</td>
+          <td class="num">100%</td>
+          <td class="num">120,000,000</td>
+          <td class="num">3,000,000</td>
+          <td class="num">117,000,000</td>
+          <td class="num" style="color:#dc2626;">~39,001,500</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-small text-muted mt-sm">*คำนวณ PIT แบบ progressive (0-35%) บน Capital Gain โดยไม่รวมรายได้อื่นของผู้ถือหุ้นในปีนั้น ตัวเลขจริงอาจขยับตามรายได้อื่น · ไม่รวมค่าใช้จ่ายอื่นที่หักได้</p>
+
+    <div class="callout callout-danger">
+      <h4>⚠️ ภาษี 39M = เกือบ 1/3 ของดีล</h4>
+      <p>ถ้าขายหุ้นทั้ง 120M ล้วนๆ โดยไม่จัดโครงสร้าง ครอบครัวเสียภาษีประมาณ <strong>39 ล้านบาท</strong> (33% ของดีล) เหลือจริงเพียง ~81M — นี่คือเหตุผลที่ต้องใช้ <strong>3-Way Split Structure</strong> ในข้อ 3</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================ 3. OPTIONS ================ -->
+<section id="options">
+  <div class="container">
+    <span class="section-kicker">03 · Deal Structure Options</span>
+    <h2>4 ทางเลือกในการจัดโครงสร้างดีล</h2>
+    <p class="section-intro">มูลค่าดีลเท่ากันที่ 120M แต่วิธีจัดสรรมูลค่าต่างกัน ส่งผลต่อภาษีที่เสียต่างกันมาก — <strong style="color:#047857;">Option D (ใหม่) ใช้ MRT Premium เป็นเหตุอันสมควร</strong> ในการยกมูลค่าที่ดินสูงขึ้นตามราคาตลาดจริง</p>
+
+    <div class="grid-2">
+      <!-- Option A -->
+      <div class="option-card">
+        <div class="option-title">ทางเลือก A</div>
+        <div class="option-subtitle">Pure Share Sale 120M</div>
+        <div class="option-breakdown">
+          <div class="breakdown-row"><span>ที่ดินคุณแม่</span><span>0 บาท</span></div>
+          <div class="breakdown-row"><span>คืนเงินกู้กรรมการ</span><span>0 บาท</span></div>
+          <div class="breakdown-row"><span>ขายหุ้น</span><span>120,000,000</span></div>
+          <div class="breakdown-row"><span>รวม</span><span>120,000,000</span></div>
+        </div>
+        <div class="callout callout-danger" style="margin:12px 0; font-size:13px; padding:12px 14px;">
+          <strong>ภาษีรวม ~39M</strong><br>เข้ากระเป๋าสุทธิ ~77M (รวมหักค่านายหน้า)
+        </div>
+        <ul class="pro-con-list">
+          <li class="pro">ง่ายที่สุด เอกสารน้อย</li>
+          <li class="pro">ไม่ต้องคุยเรื่องแบ่งราคา</li>
+          <li class="con">เสียภาษีแพงที่สุด</li>
+          <li class="con">เสียโอกาส MRT Premium ทิ้ง</li>
+        </ul>
+      </div>
+
+      <!-- Option B -->
+      <div class="option-card">
+        <div class="option-title">ทางเลือก B</div>
+        <div class="option-subtitle">3-Way Split (Baseline)</div>
+        <div class="option-breakdown">
+          <div class="breakdown-row"><span>ที่ดินคุณแม่</span><span>40,000,000</span></div>
+          <div class="breakdown-row"><span>คืนเงินกู้กรรมการ</span><span>27,750,000</span></div>
+          <div class="breakdown-row"><span>ขายหุ้น</span><span>52,250,000</span></div>
+          <div class="breakdown-row"><span>รวม</span><span>120,000,000</span></div>
+        </div>
+        <div class="callout callout-info" style="margin:12px 0; font-size:13px; padding:12px 14px;">
+          <strong>ภาษีรวม ~17M</strong><br>เข้ากระเป๋าสุทธิ <strong>~99M</strong> <span style="color:#3b82f6;">(+22M จาก A)</span>
+        </div>
+        <ul class="pro-con-list">
+          <li class="pro">ประหยัดภาษี 22M</li>
+          <li class="pro">ใช้ Stamp Duty 0.5% แทน SBT</li>
+          <li class="pro">ปลอดภัยมาก (conservative)</li>
+          <li class="con">ไม่ใช้ MRT Premium</li>
+        </ul>
+      </div>
+
+      <!-- Option C -->
+      <div class="option-card">
+        <div class="option-title">ทางเลือก C</div>
+        <div class="option-subtitle">Mid Land Allocation</div>
+        <div class="option-breakdown">
+          <div class="breakdown-row"><span>ที่ดินคุณแม่</span><span>60,000,000</span></div>
+          <div class="breakdown-row"><span>คืนเงินกู้กรรมการ</span><span>27,750,000</span></div>
+          <div class="breakdown-row"><span>ขายหุ้น</span><span>32,250,000</span></div>
+          <div class="breakdown-row"><span>รวม</span><span>120,000,000</span></div>
+        </div>
+        <div class="callout callout-info" style="margin:12px 0; font-size:13px; padding:12px 14px;">
+          <strong>ภาษีรวม ~11M</strong><br>เข้ากระเป๋าสุทธิ <strong>~105M</strong> <span style="color:#3b82f6;">(+28M จาก A)</span>
+        </div>
+        <ul class="pro-con-list">
+          <li class="pro">ประหยัดภาษีเพิ่ม 6M</li>
+          <li class="pro">MRT Premium รองรับราคา 60M ง่าย</li>
+          <li class="con">ต้องมี Independent Appraisal</li>
+          <li class="con">ต้องเจรจากับผู้ซื้อ</li>
+        </ul>
+      </div>
+
+      <!-- Option D RECOMMENDED -->
+      <div class="option-card recommended" style="border-color:#10b981; border-width:3px;">
+        <div class="option-badge" style="background:#10b981;">⭐ แนะนำ · MRT</div>
+        <div class="option-title" style="color:#047857;">ทางเลือก D</div>
+        <div class="option-subtitle"><strong>MRT-Adjusted Land Allocation</strong></div>
+        <div class="option-breakdown">
+          <div class="breakdown-row"><span>ที่ดินคุณแม่ 🚆</span><span style="color:#047857; font-weight:700;">70,000,000</span></div>
+          <div class="breakdown-row"><span>คืนเงินกู้กรรมการ</span><span>27,750,000</span></div>
+          <div class="breakdown-row"><span>ขายหุ้น</span><span>22,250,000</span></div>
+          <div class="breakdown-row"><span>รวม</span><span>120,000,000</span></div>
+        </div>
+        <div class="callout callout-success" style="margin:12px 0; font-size:13px; padding:12px 14px;">
+          <strong>ภาษีรวม ~8-9M</strong><br>เข้ากระเป๋าสุทธิ <strong style="font-size:16px;">~107-108M</strong> <span style="color:#10b981; font-weight:700;">(+30M จาก A)</span>
+        </div>
+        <ul class="pro-con-list">
+          <li class="pro"><strong>ประหยัดภาษีสูงสุด ~30M</strong></li>
+          <li class="pro">MRT 200m = เหตุอันสมควรหนักแน่น</li>
+          <li class="pro">ผู้ซื้อชอบ (ได้ค่าเสื่อมเยอะ)</li>
+          <li class="pro">อยู่ในกรอบ Premium ตลาด +75%</li>
+          <li class="con">ต้องมี AREA Appraisal ยืนยัน</li>
+          <li class="con">ต้องใช้เวลาเจรจามากขึ้น</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout callout-success" style="margin-top:28px;">
+      <h4>🚆 ทำไม Option D ถึงใช้งานได้จริง (ไม่เสี่ยงเกินไป)</h4>
+      <p>• <strong>MRT Premium</strong> → สถิติจาก AREA/Plus Property ระบุว่าที่ดินในรัศมี 200m จากสถานี MRT มี Premium <strong>+50% ถึง +150%</strong> เหนือ baseline — ยกราคาจาก 40M ไป 70M = Premium +75% ซึ่งอยู่กลางกรอบตลาด<br>
+      • <strong>หลักฐานที่ต้องมี</strong> → Independent Appraisal จากบริษัทประเมินที่ตลาดยอมรับ (AREA, Knight Frank, Plus Property) ระบุอ้างอิง MRT อย่างชัดเจน<br>
+      • <strong>Buyer Incentive</strong> → ผู้ซื้อนิติบุคคลจะ<strong>ชอบ</strong> Option D มากกว่า เพราะได้ Depreciable Asset Base สูงขึ้น = หัก CIT 20% ได้ทุกปีตลอด 20+ ปี</p>
+    </div>
+
+    <div class="callout callout-info" style="margin-top:16px;">
+      <h4>📌 ตรรกะของการจัดโครงสร้าง</h4>
+      <p>• <strong>ที่ดินคุณแม่</strong> → ขายเป็นบุคคลธรรมดา ถือ &gt; 5 ปี ใช้ Stamp Duty 0.5% แทน SBT 3.3% · effective PIT ~6-10% (vs หุ้น 30-35%)<br>
+      • <strong>เงินกู้กรรมการ</strong> → "คืนเงินต้น" = ไม่เสียภาษีเลย (ต้องมี bank statement ยืนยัน)<br>
+      • <strong>ขายหุ้น</strong> → ยิ่งลดมูลค่า ยิ่งหลบ bracket 35% ของ PIT · ที่ 22.25M = เฉลี่ยคนละ ~5.5M = PIT effective ~20%</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================ 4. EXPENSES ================ -->
+<section id="expenses">
+  <div class="container">
+    <span class="section-kicker">04 · Deal Expenses</span>
+    <h2>ค่าใช้จ่ายทั้งหมดที่จะเกิดขึ้น (Option D · MRT-Adjusted)</h2>
+    <p class="section-intro">รายละเอียดค่าใช้จ่ายทุกบรรทัดที่จะเกิดกับครอบครัวระหว่างทางจนถึงวันปิดดีล — แบ่งเป็นภาษี ค่าธรรมเนียมราชการ ค่าวิชาชีพ และสำรองความเสี่ยง · คำนวณจากการจัดสรร 70M → ที่ดิน, 27.75M → คืนเงินกู้กรรมการ, 22.25M → ขายหุ้น</p>
+
+    <h3 style="margin-top:10px;">🏷️ ภาษีจากดีล</h3>
+    <div class="expense-grid">
+      <div class="expense-row">
+        <div class="expense-icon icon-red">1</div>
+        <div class="expense-desc"><strong>PIT จาก Capital Gain ขายหุ้น</strong>คำนวณ progressive บนยอดขายหุ้น 22.25M · ผู้ถือหลักเฉลี่ยคนละ ~5.5M เข้า bracket 30% = PIT ต่อคน ~1.4M × 4 คนหลัก <span style="color:#059669;">(ลดจาก Option B ถึง ~9M)</span></div>
+        <div class="expense-amount">฿ 5,500,000 <span class="unit">ประมาณ</span></div>
+      </div>
+      <div class="expense-row">
+        <div class="expense-icon icon-red">2</div>
+        <div class="expense-desc"><strong>PIT จากการขายที่ดิน (คุณแม่)</strong>ใช้สูตรที่ดินมรดก/ได้มา-ถือ &gt; 5 ปี · คำนวณจาก 70M (ฐาน MRT-Adjusted) · effective rate ~5-6% · เพิ่มจาก 40M base ประมาณ 1.7M</div>
+        <div class="expense-amount">฿ 4,100,000 <span class="unit">โดยประมาณ</span></div>
+      </div>
+      <div class="expense-row">
+        <div class="expense-icon icon-orange">3</div>
+        <div class="expense-desc"><strong>Stamp Duty 0.5%</strong>บนราคาขายที่ดิน 70M (แทน SBT 3.3% เพราะคุณแม่ถือ &gt; 5 ปี — ประหยัด ~1.96M เทียบ SBT)</div>
+        <div class="expense-amount">฿ 350,000</div>
+      </div>
+      <div class="expense-row">
+        <div class="expense-icon icon-orange">4</div>
+        <div class="expense-desc"><strong>ค่าธรรมเนียมโอนที่ดิน 2%</strong>บน 70M — ปกติครึ่ง-ครึ่งกับผู้ซื้อ · แนะนำต่อรองให้ผู้ซื้อจ่ายทั้งหมด (Lever 6)</div>
+        <div class="expense-amount">฿ 700,000 <span class="unit">ครึ่งหนึ่ง</span></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:30px;">💼 ค่านายหน้า + ค่าวิชาชีพ</h3>
+    <div class="expense-grid">
+      <div class="expense-row">
+        <div class="expense-icon icon-yellow">5</div>
+        <div class="expense-desc"><strong>ค่านายหน้า 3%</strong>จ่ายเมื่อดีลปิดสำเร็จ — <span style="color:#059669;">แนะนำจัดสรรเข้ากับการขายหุ้น</span>เพื่อหักเป็นรายจ่ายที่ 35% PIT (ประหยัด 1.26M)</div>
+        <div class="expense-amount">฿ 3,600,000</div>
+      </div>
+      <div class="expense-row">
+        <div class="expense-icon icon-blue">6</div>
+        <div class="expense-desc"><strong>CPA + ที่ปรึกษาภาษี</strong>ช่วย DD ฝั่งเรา + ทำเอกสารบัญชี + Due Diligence ตอบผู้ซื้อ</div>
+        <div class="expense-amount">฿ 300,000 <span class="unit">ประมาณ</span></div>
+      </div>
+      <div class="expense-row">
+        <div class="expense-icon icon-blue">7</div>
+        <div class="expense-desc"><strong>ทนายความร่าง SPA</strong>ร่างและเจรจา Share Purchase Agreement + Tax Indemnity + Escrow terms</div>
+        <div class="expense-amount">฿ 250,000 <span class="unit">ประมาณ</span></div>
+      </div>
+      <div class="expense-row">
+        <div class="expense-icon icon-blue">8</div>
+        <div class="expense-desc"><strong>Valuation ที่ดิน (Independent Appraisal · MRT-focused)</strong>จ้าง <strong>AREA หรือ Knight Frank</strong> ทำ appraisal ที่อ้างอิง MRT Premium โดยเฉพาะ — จำเป็นเพราะต้องรองรับราคาขาย 70M · ป้องกัน Sec. 65 ทวิ (4)</div>
+        <div class="expense-amount">฿ 150,000 <span class="unit">ประมาณ</span></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:30px;">🛡️ สำรองความเสี่ยง (Contingency)</h3>
+    <div class="expense-grid">
+      <div class="expense-row">
+        <div class="expense-icon icon-purple">9</div>
+        <div class="expense-desc"><strong>Escrow สำหรับ Tax Indemnity</strong>หักจาก 120M ไว้ 24 เดือน เผื่อสรรพากรประเมินภาษีย้อนหลัง (เช่น ค่าเช่าฟรีในอดีต) — <em>คืนถ้าไม่มีการประเมิน</em></div>
+        <div class="expense-amount">฿ 5,000,000 <span class="unit">พัก ไม่ใช่จ่าย</span></div>
+      </div>
+      <div class="expense-row">
+        <div class="expense-icon icon-green">10</div>
+        <div class="expense-desc"><strong>ค่าปิดบริษัท (ถ้าเลือกปิด)</strong>CPA + ค่าธรรมเนียม DBD + ภาษีสุดท้าย — แต่ใน Option D ไม่ต้องปิด (ขายหุ้นให้ผู้ซื้อไป)</div>
+        <div class="expense-amount">฿ 0 <span class="unit">ไม่มี</span></div>
+      </div>
+    </div>
+
+    <div class="callout callout-success" style="margin-top:28px;">
+      <h4>สรุปภาพรวม Option D (MRT-Adjusted)</h4>
+      <table style="margin-top:10px; background:transparent; box-shadow:none;">
+        <tbody>
+          <tr><td style="color:#064e3b;">รับจากผู้ซื้อ</td><td class="num" style="color:#064e3b; font-weight:700;">120,000,000</td></tr>
+          <tr><td style="color:#064e3b;">หัก: ภาษีรวม (PIT หุ้น + PIT ที่ดิน + Stamp + ค่าโอน)</td><td class="num" style="color:#b91c1c;">(10,650,000)</td></tr>
+          <tr><td style="color:#064e3b;">หัก: ค่านายหน้า + วิชาชีพ</td><td class="num" style="color:#b91c1c;">(4,300,000)</td></tr>
+          <tr><td style="color:#064e3b;">พัก Escrow (รอ 24 เดือน)</td><td class="num" style="color:#ea580c;">(5,000,000)</td></tr>
+          <tr style="border-top:2px solid #064e3b;"><td style="color:#064e3b; font-weight:700;">เข้ากระเป๋าทันที (ก่อน Escrow คืน)</td><td class="num" style="color:#064e3b; font-weight:700; font-size:17px;">~100,050,000</td></tr>
+          <tr><td style="color:#064e3b; font-weight:700;">เข้ากระเป๋ารวม (หลัง Escrow คืน)</td><td class="num" style="color:#064e3b; font-weight:700; font-size:17px;">~105,050,000</td></tr>
+          <tr><td style="color:#064e3b; font-weight:700;">+ ประโยชน์จาก Lever 3/5/6 (ไม่รวมใน table)</td><td class="num" style="color:#047857; font-weight:700; font-size:17px;">~ +2M</td></tr>
+          <tr style="border-top:2px solid #047857;"><td style="color:#047857; font-weight:800;">🎯 เข้ากระเป๋าสุทธิ (เป้าหมาย)</td><td class="num" style="color:#047857; font-weight:800; font-size:19px;">~107,000,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================ 5. ACTION POINTS ================ -->
+<section id="actions">
+  <div class="container">
+    <span class="section-kicker">05 · Pre-Sale Actions</span>
+    <h2>สิ่งที่ต้องทำก่อนวันปิดดีล</h2>
+    <p class="section-intro">แผนงาน 90 วันเรียงตามลำดับความสำคัญ — รายการสีแดงต้องทำทันที เพราะถ้าผู้ซื้อเริ่ม DD แล้วเราจะไม่มีเวลาแก้ไข</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date urgent">Week 1<br>ด่วน!</div>
+        <div class="timeline-content">
+          <h4>🚨 ทำสัญญาเช่าที่ดินใหม่ + ค่าเช่าค้างจ่าย</h4>
+          <p>คุณแม่ทำสัญญาเช่าที่ดินกับบริษัทที่ค่าเช่าตลาด (~1-3% ของราคาประเมิน/ปี) กำหนด clause ให้บริษัทเลื่อนการจ่ายได้ = ติดเป็นค่าเช่าค้างจ่าย บริษัทหักรายจ่าย CIT 20% ทันที คุณแม่ยังไม่ต้องรับรู้รายได้จนกว่าจะได้รับเงิน</p>
+          <span class="owner">ผู้รับผิดชอบ: ทนาย + CPA</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date urgent">Week 1<br>สำคัญสุด!</div>
+        <div class="timeline-content">
+          <h4>🚆 ขอ AREA Appraisal ที่อ้างอิง MRT Premium โดยตรง</h4>
+          <p><strong>นี่คือหัวใจของ Option D</strong> — จ้าง <strong>AREA</strong> (หรือ Knight Frank / Plus Property) ทำ appraisal ที่ระบุชัดเจนว่า "ที่ดินอยู่ในรัศมี 200m จากสถานี MRT [ชื่อสถานี] → Prime TOD Zone → Market Premium +50-150% เหนือ baseline" เป็นหลักฐานรองรับราคา 70M · ถ้าไม่มีเอกสารนี้ = กลับไปใช้ 40M เท่านั้น</p>
+          <span class="owner">ผู้รับผิดชอบ: Pang (ติดต่อ AREA · งบ ~150K · ใช้เวลา 3-4 สัปดาห์)</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date urgent">Week 1-2</div>
+        <div class="timeline-content">
+          <h4>🚨 รวบรวมหลักฐานเงินกู้กรรมการ</h4>
+          <p>ขอ bank statement + สัญญาเงินกู้กรรมการทั้งหมดย้อนหลัง ≥ 5 ปี มาตรวจสอบ ต้องยืนยันได้ว่ามี cash flow จริงที่โอนเข้าบริษัท ไม่ใช่แค่บันทึกในบัญชี (สรรพากรจะตรวจข้อนี้แน่)</p>
+          <span class="owner">ผู้รับผิดชอบ: CPA + บัญชีบริษัท</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date soon">Week 2-3</div>
+        <div class="timeline-content">
+          <h4>⚠️ ประชุมครอบครัวตัดสินใจ Option A/B/C/D</h4>
+          <p>นำเอกสารนี้เข้าประชุมกับพ่อ แม่ พี่/น้องสาว เคาะเลือก Option (<strong>แนะนำ D ถ้า AREA ยืนยัน MRT Premium</strong>, fallback เป็น B) พร้อมยืนยันว่าใครจะเป็นตัวแทนเจรจากับผู้ซื้อและเซ็นเอกสาร — ได้ข้อสรุปแล้วเร่งไปขั้นตอนต่อไป</p>
+          <span class="owner">ผู้รับผิดชอบ: ทุกคนในครอบครัว</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date soon">Week 2-3</div>
+        <div class="timeline-content">
+          <h4>⚠️ ทำ Tax Memo เรื่อง "ค่าเช่าฟรีในอดีต"</h4>
+          <p>CPA เขียน memorandum อธิบายเหตุผลที่ในอดีตบริษัทไม่จ่ายค่าเช่า (เช่น ช่วงโควิด ขาดทุน กรรมการตกลงยกเว้นชั่วคราว) เพื่อใช้ตอบผู้ซื้อใน DD + เตรียมตอบสรรพากรถ้าถามย้อนหลัง</p>
+          <span class="owner">ผู้รับผิดชอบ: CPA</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date soon">Week 3-4</div>
+        <div class="timeline-content">
+          <h4>⚠️ ตรวจสอบงบการเงิน + ใบกำกับภาษี 3 ปีย้อนหลัง</h4>
+          <p>ให้ CPA audit ภายในก่อน เจอปัญหาอะไรเคลียร์ให้หมด — เช่น VAT ที่อาจไม่ตรง, ค่าใช้จ่ายที่อาจถูกปัดตก — ก่อนผู้ซื้อจะมาตรวจ DD เพื่อไม่ให้เป็นจุดต่อราคาลง</p>
+          <span class="owner">ผู้รับผิดชอบ: CPA</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date later">Week 4-6</div>
+        <div class="timeline-content">
+          <h4>🔵 จ้างทนายร่าง SPA (Share Purchase Agreement)</h4>
+          <p>ใส่ clause สำคัญ: Tax Indemnity (ครอบครัวรับภาษีก่อน Closing), Escrow 5M × 24 เดือน, Rep & Warranties ที่จำกัด, Earn-out ถ้ามี, ข้อกำหนดการโอนใบอนุญาตโรงแรม</p>
+          <span class="owner">ผู้รับผิดชอบ: ทนาย M&A</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date later">Week 6-8</div>
+        <div class="timeline-content">
+          <h4>🔵 เปิด DD Room สำหรับผู้ซื้อ</h4>
+          <p>เตรียม Virtual Data Room (Google Drive หรือ Dropbox) มีเอกสารครบ: งบการเงิน, ภาษี, สัญญาเช่า, ใบอนุญาต, สัญญาพนักงาน, สัญญาลูกค้า/คู่ค้า — แยกสิทธิ์อ่าน/ดาวน์โหลดตามระดับ</p>
+          <span class="owner">ผู้รับผิดชอบ: Pang + CPA</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date later">Week 8-10</div>
+        <div class="timeline-content">
+          <h4>🔵 เจรจาและแก้ SPA รอบสุดท้าย</h4>
+          <p>รอบสุดท้ายก่อนเซ็น — focus ที่ Escrow, Indemnity cap, Survival period ของ Rep & Warranties (ขอให้สั้นที่สุด 12-18 เดือน) ค่าใช้จ่ายการโอนใครจ่าย</p>
+          <span class="owner">ผู้รับผิดชอบ: ทนาย + ครอบครัว</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date later">Week 10-12</div>
+        <div class="timeline-content">
+          <h4>🔵 Closing Day (Option D)</h4>
+          <p>1) บริษัทคืนเงินกู้กรรมการ (27.75M) 2) คุณแม่โอนที่ดินให้ผู้ซื้อ + รับเงิน (70M) 3) ผู้ถือหุ้นโอนหุ้นให้ผู้ซื้อ + รับเงิน (22.25M หัก Escrow 5M) 4) เปลี่ยนกรรมการ DBD 5) แจ้งเปลี่ยนผู้จัดการโรงแรม (ไม่ต้องขอใบอนุญาตใหม่เพราะบริษัทยังเป็นนิติบุคคลเดิม)</p>
+          <span class="owner">ผู้รับผิดชอบ: ทีม Closing ทั้งหมด</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ 6. COST ALLOCATION ================ -->
+<section id="allocation">
+  <div class="container">
+    <span class="section-kicker">06 · Cost Allocation Levers</span>
+    <h2>ปุ่มที่กดได้เพื่อลดภาษี (Optimization Levers)</h2>
+    <p class="section-intro">ในกรอบดีล 120M มี 6 ปุ่มที่ครอบครัวสามารถ "กด" เพื่อจัดสรรมูลค่า ประหยัดภาษีได้สูงสุด โดยไม่กระทบมูลค่ารับรวม — เรียงจากประหยัดมากไปน้อย พร้อมประเมินความเสี่ยง</p>
+
+    <div class="lever-card" style="border-left:4px solid #10b981;">
+      <div class="lever-header">
+        <div class="lever-name">🚆 Lever 1 · MRT Premium Land Allocation (35M → 40M → 50M → <strong style="color:#047857;">70M</strong>)</div>
+        <div class="lever-saving" style="background:#d1fae5; color:#047857;">ประหยัดสูงสุด ~30M</div>
+      </div>
+      <div class="lever-body">
+        <strong>วิธี:</strong> ย้ายมูลค่าจากการขายหุ้น (PIT สูงสุด 35%) ไปเป็นการขายที่ดิน (PIT effective rate ~5-6%) ทุก ๆ 1M ที่ย้าย = ประหยัด ~2.5-3 แสน · ด้วย MRT 200m ทำให้เพดานขยายจาก 50M ไปถึง <strong>70M</strong> ได้อย่างสมเหตุสมผล<br>
+        <strong>เพดาน (ใหม่):</strong> ราคา AREA Appraisal + 10-15% · กรอบตลาดของที่ดิน Prime TOD (ติด MRT &lt; 200m) อยู่ที่ +50-150% เหนือ baseline ตามสถิติ AREA/Plus Property — ยกจาก 40M → 70M = Premium +75% อยู่กลางกรอบ<br>
+        <strong>ความเสี่ยง:</strong> 🟢 เหตุอันสมควรชัดเจน (MRT = Prime TOD Zone) · <strong>เงื่อนไขที่ต้องมี:</strong> AREA Appraisal อ้างอิง MRT โดยตรง + หลักฐานระยะทางจริง (Google Maps / แผนผัง BTS/MRT) + ข่าวประกาศเส้นทางจาก รฟม.
+      </div>
+    </div>
+
+    <div class="lever-card">
+      <div class="lever-header">
+        <div class="lever-name">🎯 Lever 2 · เพิ่มคืนเงินกู้กรรมการ (ตามหลักฐานจริง)</div>
+        <div class="lever-saving">ประหยัด ~25% ของมูลค่าที่เลื่อนมาได้</div>
+      </div>
+      <div class="lever-body">
+        <strong>วิธี:</strong> ตรวจสอบเงินกู้กรรมการในบัญชีบริษัทว่ามียอดจริงเท่าไหร่ ให้บริษัทจ่ายคืนก่อน Closing = เป็น "คืนเงินต้น" ไม่ใช่รายได้ = ไม่เสียภาษีใดๆ<br>
+        <strong>เพดาน:</strong> จำกัดที่ยอดเงินกู้จริงที่บันทึกในงบ (ตามตัวเลขเดิม ~27.75M)<br>
+        <strong>ความเสี่ยง:</strong> 🟢 ปลอดภัยที่สุด ถ้ามีหลักฐาน bank statement ยืนยัน · แต่อย่าพยายาม "สร้างเงินกู้ย้อนหลัง" (ผิดกฎหมาย)
+      </div>
+    </div>
+
+    <div class="lever-card">
+      <div class="lever-header">
+        <div class="lever-name">🎯 Lever 3 · จัดสรรค่านายหน้า 3.6M ไปฝั่งขายหุ้น</div>
+        <div class="lever-saving">ประหยัด ~1.26M</div>
+      </div>
+      <div class="lever-body">
+        <strong>วิธี:</strong> ในสัญญานายหน้าระบุให้หักเฉพาะยอดขายหุ้น (ไม่ใช่รวมทั้งดีล) หรือจัดสัญญานายหน้า 2 ฉบับแยก — ค่านายหน้าฝั่งหุ้นหักลดหย่อน PIT ที่ 35% (1.26M) vs ฝั่งที่ดิน PIT ~10% (0.36M)<br>
+        <strong>เพดาน:</strong> 3.6M ทั้งก้อน<br>
+        <strong>ความเสี่ยง:</strong> 🟢 ไม่มี ทำได้เลย แค่เป็นเรื่องของการเขียนสัญญา
+      </div>
+    </div>
+
+    <div class="lever-card">
+      <div class="lever-header">
+        <div class="lever-name">🎯 Lever 4 · กระจายความเป็นผู้ขายหุ้นระหว่างสมาชิก</div>
+        <div class="lever-saving">ประหยัด ~2-3M</div>
+      </div>
+      <div class="lever-body">
+        <strong>วิธี:</strong> ก่อนขายหุ้น โอนหุ้นระหว่างสมาชิกครอบครัว (ตามสิทธิ Gift Tax ยกเว้น 20M/ปี สำหรับบุพการี-บุตร) เพื่อกระจายให้ไม่มีใครได้ Capital Gain ทะลุ 5M (bracket 35%) — ลด PIT เฉลี่ยจาก ~30% เหลือ ~25%<br>
+        <strong>เพดาน:</strong> จำกัดที่ 20M/ปี ต่อคู่ผู้รับ + ต้องทำ ≥ 6 เดือนก่อนขายเพื่อไม่ให้ดูเป็น sham<br>
+        <strong>ความเสี่ยง:</strong> 🟡 ต้องทำในเวลาที่เหมาะสม และมีเอกสารการให้โดยเสน่หา · <em>ถ้าดีลจะปิดใน 3 เดือน ทำไม่ทัน</em>
+      </div>
+    </div>
+
+    <div class="lever-card">
+      <div class="lever-header">
+        <div class="lever-name">🎯 Lever 5 · ใช้ Loss Carryforward ของบริษัทก่อนดีล</div>
+        <div class="lever-saving">ประหยัด ~1M</div>
+      </div>
+      <div class="lever-body">
+        <strong>วิธี:</strong> ถ้าบริษัทมียอดขาดทุนสะสม 5.22M ใช้ได้ใน 5 ปี → ก่อนปิดดีลให้บริษัทสร้างกำไร (เช่น ให้เช่าที่ดินย่อย/ขายสินทรัพย์เล็กน้อย) ใช้ loss carryforward หักก่อน = ลด CIT 20% บน 5.22M = ประหยัด ~1M<br>
+        <strong>เพดาน:</strong> 5.22M (ยอดที่มี) · ใช้ได้ใน 5 ปีนับจากปีที่ขาดทุน<br>
+        <strong>ความเสี่ยง:</strong> 🟢 ปลอดภัย · แต่ต้องมีรายได้จริงรองรับ · ถ้าไม่มี ก็ทิ้ง loss ไป
+      </div>
+    </div>
+
+    <div class="lever-card">
+      <div class="lever-header">
+        <div class="lever-name">🎯 Lever 6 · ต่อรองให้ผู้ซื้อจ่ายค่าธรรมเนียมการโอน</div>
+        <div class="lever-saving">ประหยัด ~400K</div>
+      </div>
+      <div class="lever-body">
+        <strong>วิธี:</strong> ปกติค่าธรรมเนียมการโอนที่ดิน 2% จ่ายครึ่ง-ครึ่งกับผู้ซื้อ ลองต่อรองให้ผู้ซื้อจ่ายทั้งหมด (เป็นเรื่องปกติในดีล M&A ที่ผู้ขายได้ใจดี)<br>
+        <strong>เพดาน:</strong> 800K (ครึ่งที่เราจะประหยัด)<br>
+        <strong>ความเสี่ยง:</strong> 🟢 ไม่มี · แค่เป็นเรื่อง negotiation
+      </div>
+    </div>
+
+    <div class="callout callout-success" style="margin-top:28px;">
+      <h4>🧮 รวมประโยชน์จากทุก Lever (Option D · MRT-Adjusted)</h4>
+      <p>• <strong>Lever 1 (MRT Premium 40M→70M)</strong> = ประหยัด ~24M (ภาษี PIT 35% → PIT land 5-6%)<br>
+      • <strong>Lever 2 (Director Loan คืนเงินต้น)</strong> = ประหยัด ~7M (ภาษี 25% → 0%)<br>
+      • <strong>Lever 3 (จัดสรรค่านายหน้าไปฝั่งหุ้น)</strong> = ประหยัด ~1.26M<br>
+      • <strong>Lever 5 (Loss Carryforward)</strong> = ประหยัด ~1M<br>
+      • <strong>Lever 6 (Buyer จ่ายค่าโอน)</strong> = ประหยัด ~0.7M<br>
+      รวม <strong>~34M</strong> เทียบกับ Option A (Pure Share Sale ที่ 77M) — <strong>Option D + Lever ทั้งหมด = เข้ากระเป๋าสุทธิ ~107M</strong> 🎯</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================ 7. RECOMMENDATION ================ -->
+<section id="recommendation">
+  <div class="container">
+    <span class="section-kicker">07 · Recommendation</span>
+    <h2>คำแนะนำสรุป</h2>
+    <p class="section-intro">เลือก <strong style="color:#047857;">Option D (MRT-Adjusted Land Allocation)</strong> + ใช้ Lever 1, 2, 3, 5, 6 พร้อมกัน · <strong>เงื่อนไขบังคับ:</strong> ต้องได้ AREA Appraisal ที่ระบุ MRT Premium ชัดเจนก่อนเซ็น SPA · ถ้า AREA ไม่ยืนยัน → fallback เป็น Option B (40M)</p>
+
+    <div class="grid-2">
+      <div class="card" style="background:linear-gradient(180deg,#f0fdf4 0%, #ffffff 40%); border:2px solid #10b981;">
+        <h3 style="color:#047857;">✓ ทำทันทีสัปดาห์นี้</h3>
+        <ol style="padding-left:20px; margin-top:10px; color:#334155;">
+          <li style="margin:6px 0;"><strong>จ้าง AREA Appraisal</strong> (อ้างอิง MRT 200m)</li>
+          <li style="margin:6px 0;">ทำสัญญาเช่าที่ดินใหม่ (คุณแม่ ↔ บริษัท)</li>
+          <li style="margin:6px 0;">รวบรวมเอกสารเงินกู้กรรมการ</li>
+          <li style="margin:6px 0;">รวบรวมหลักฐาน MRT (ข่าว รฟม. + Google Maps)</li>
+          <li style="margin:6px 0;">นัดประชุมครอบครัวเลือก Option</li>
+        </ol>
+      </div>
+      <div class="card" style="background:linear-gradient(180deg,#fef3c7 0%, #ffffff 40%); border:2px solid #f59e0b;">
+        <h3 style="color:#a16207;">⚠ ห้ามทำเด็ดขาด</h3>
+        <ol style="padding-left:20px; margin-top:10px; color:#334155;">
+          <li style="margin:6px 0;">สร้างสัญญาเช่าย้อนหลัง (backdating)</li>
+          <li style="margin:6px 0;">สร้างเงินกู้กรรมการย้อนหลังที่ไม่มี bank statement</li>
+          <li style="margin:6px 0;"><strong>ตั้งราคา 70M โดยไม่มี AREA Appraisal รองรับ</strong></li>
+          <li style="margin:6px 0;">รับเงินสดนอกบัญชี (Under-the-table)</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="callout callout-success" style="margin-top:28px; text-align:center;">
+      <h4 style="font-size:18px;">🎯 เป้าหมายสุดท้าย (Option D)</h4>
+      <p style="font-size:16px; margin-top:8px;">เข้ากระเป๋าครอบครัวสุทธิ <strong style="font-size:26px; color:#047857;">~107M</strong> จากดีล 120M · ประหยัดภาษีรวม <strong>~30M จาก Option A</strong> · ปิดดีลใน 10-12 สัปดาห์</p>
+      <p style="font-size:13px; margin-top:8px; color:#065f46;">ภาษีรวม ~10.65M (เทียบกับ Option A ~40M) · MRT 200m = Game Changer หลักของดีล</p>
+    </div>
+
+    <div class="callout callout-warning" style="margin-top:20px;">
+      <h4>📞 ขั้นต่อไป</h4>
+      <p>ก่อนประชุมครอบครัว แนะนำให้ทำ 2 เรื่องขนานกัน: (1) <strong>ติดต่อ AREA ขอ quote + timeline appraisal</strong> (MRT-focused) ใช้เวลา ~3-4 สัปดาห์ (2) นัด <strong>CPA + ทนาย M&A</strong> ประชุมกันเองก่อน 1 รอบ (~2 ชม. · ค่าใช้จ่าย ~20K) เพื่อให้เห็นภาพ Option D ในทางปฏิบัติ · ได้ AREA preliminary + CPA opinion แล้วค่อยนำเข้าประชุมครอบครัว จะเด็ดขาดและเร็วกว่ามาก</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================ FOOTER ================ -->
+<footer>
+  <div class="container">
+    <p><strong>บ้านพรรณตระกูล จำกัด · Deal Summary</strong></p>
+    <p style="margin-top:8px;">เอกสารจัดทำขึ้นเพื่อการวางแผนและอภิปรายในครอบครัวเท่านั้น · ตัวเลขเป็นการประมาณการเบื้องต้น ยังไม่ใช่คำแนะนำทางภาษี/กฎหมาย</p>
+    <p style="margin-top:8px;">ก่อนดำเนินการจริง ต้องได้รับการรับรองจาก <strong>CPA</strong> และ <strong>ทนายความ M&A</strong> ที่ครอบครัวแต่งตั้ง</p>
+    <p style="margin-top:20px; font-size:11px; opacity:0.6;">Prepared by Bono · Last updated: 22 April 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
